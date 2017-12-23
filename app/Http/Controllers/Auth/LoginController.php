@@ -37,7 +37,7 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-
+    //函數優先於屬性
     // protected function redirectTo()
     // {
     //     return '/home';
@@ -53,7 +53,7 @@ class LoginController extends Controller
         $credentials = $this->credentials($request);
         $credentialsValue = $credentials['email'];
         unset($credentials['email']);
-        
+
         $account = filter_var($credentialsValue, FILTER_VALIDATE_EMAIL)?'email':'name';
         $credentials[$account] = $credentialsValue;
 
