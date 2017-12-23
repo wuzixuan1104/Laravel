@@ -12,6 +12,7 @@
             return '/loginPath';
         }
         ```
+        
         + 登入帳號可填姓名或信箱＝> 新cover AuthenticatesUsers function
 
         ```
@@ -29,6 +30,7 @@
             );
         }
         ```
+        
   2. migration:
         + 新增table(增加migrate file):
 
