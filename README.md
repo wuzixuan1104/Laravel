@@ -1,6 +1,6 @@
 # Laravel
 
-##  Laravel 學習紀錄
+##  學習紀錄
 
 * ###auth:
   1. 個人化：
