@@ -2,8 +2,8 @@
 
 ##  學習紀錄
 
-### 用戶身份驗證與授權 auth:
-  1. 個人化auth：
+ * 用戶身份驗證與授權 auth:
+	1. 個人化auth：
         + 登入成功導向頁面 => Http/COntrollers/Auth/LoginController
           (method優先於attribute)
 
@@ -12,7 +12,7 @@
             return '/loginPath';
         }
         ```
-        
+
         + 登入帳號可填姓名或信箱＝> 新cover AuthenticatesUsers function
 
         ```
@@ -30,8 +30,8 @@
             );
         }
         ```
-        
-  2. migration:
+
+  	2. migration:
         + 新增table(增加migrate file):
 
         ```
