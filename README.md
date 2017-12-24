@@ -4,6 +4,7 @@
 
  * 用戶身份驗證與授權 auth:
 	1. 個人化auth：
+        + 登入成功 laravel 會為登入的人產生 remember_token
         + 登入成功導向頁面 => Http/COntrollers/Auth/LoginController
           (method優先於attribute)
 
@@ -31,6 +32,8 @@
         }
         ```
 
+        + 註冊欄位增加nickname <br>
+
   	2. migration:
         + 新增table(增加migrate file):
 
@@ -46,6 +49,23 @@
         ```
         Schema::table('users', function($table) {
             $table->integer('nick_name')->after('name');
+        });
+        ```
+
+        + 修改已存在欄位的型態：</br><br>
+
+        安裝 doctrine/dbal
+
+        ```
+        composer require doctrine/dbal </br>
+        composer update
+        ```
+
+        撰寫Schema => nick_name(int) -> (varchar)
+
+        ```
+        Schema::table('users', function($table) {
+           $table->string('nick_name', 50)->change();
         });
         ```
 
